@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-06T22:06:09.022544" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste" source="c:\Users\Néa\OneDrive\Documentos\GitHub\Etapa Teste LINX\Linx\teste.robot">
+<test id="s1-t1" name="Cenario 01: Acessar site e verificar se filial Cascavel/PR está visivel em tela" line="7">
+<kw name="Acesso ao Site Linx" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:09.340070" level="INFO">Opening browser 'Chrome' to base url 'http://www.linx.com.br/'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-06T22:06:09.340070" elapsed="11.952941"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-06T22:06:21.298462" elapsed="0.126479"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-02-06T22:06:21.425950" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-06T22:06:09.340070" elapsed="12.085880"/>
+</kw>
+<kw name=" Acessar Menu" owner="resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:21.425950" level="INFO">Clicking element '//ul[@class='m-list m-menu']//*[contains(text(),'Institucional')]'.</msg>
+<arg>//ul[@class='m-list m-menu']//*[contains(text(),'${MENUITEM}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T22:06:21.425950" elapsed="0.165468"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//li[@class='m-list_item']//*[contains(text(), '${ITEM}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-06T22:06:21.591418" elapsed="0.041225"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:21.632643" level="INFO">Clicking element '//li[@class='m-list_item']//*[contains(text(), 'Matriz e filiais')]'.</msg>
+<arg>//li[@class='m-list_item']//*[contains(text(), '${ITEM}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T22:06:21.632643" elapsed="2.202013"/>
+</kw>
+<arg>Institucional</arg>
+<arg>Matriz e filiais</arg>
+<status status="PASS" start="2024-02-06T22:06:21.425950" elapsed="2.408706"/>
+</kw>
+<kw name="filal deverá ser visivel em tela" owner="resource">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//address[@class='c-address-list__item o-box o-box--gray']//*[contains(text(),'${FILIAL}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-06T22:06:23.837226" elapsed="0.021078"/>
+</kw>
+<arg>Cascavel/PR</arg>
+<status status="PASS" start="2024-02-06T22:06:23.834656" elapsed="0.024198"/>
+</kw>
+<kw name="filal não deverá ser visivel em tela" owner="resource">
+<kw name="Wait Until Page Does Not Contain Element" owner="SeleniumLibrary">
+<arg>//address[@class='c-address-list__item o-box o-box--gray']//*[contains(text(),'${FILIAL}')]</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" start="2024-02-06T22:06:23.861102" elapsed="0.019238"/>
+</kw>
+<arg>Aparecida de Goiania</arg>
+<status status="PASS" start="2024-02-06T22:06:23.859995" elapsed="0.020345"/>
+</kw>
+<kw name="Retornar a tela inicial" owner="resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:23.884003" level="INFO">Clicking element '//div[@class='o-header_logo']'.</msg>
+<arg>${HOME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T22:06:23.883054" elapsed="0.954740"/>
+</kw>
+<status status="PASS" start="2024-02-06T22:06:23.882125" elapsed="0.955669"/>
+</kw>
+<kw name=" Acessar Menu" owner="resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:24.837794" level="INFO">Clicking element '//ul[@class='m-list m-menu']//*[contains(text(),'Institucional')]'.</msg>
+<arg>//ul[@class='m-list m-menu']//*[contains(text(),'${MENUITEM}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T22:06:24.837794" elapsed="0.196219"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//li[@class='m-list_item']//*[contains(text(), '${ITEM}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-06T22:06:25.034013" elapsed="0.065269"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:25.099282" level="INFO">Clicking element '//li[@class='m-list_item']//*[contains(text(), 'Carreira Linx')]'.</msg>
+<arg>//li[@class='m-list_item']//*[contains(text(), '${ITEM}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T22:06:25.099282" elapsed="3.692112"/>
+</kw>
+<arg>Institucional</arg>
+<arg>Carreira Linx</arg>
+<status status="PASS" start="2024-02-06T22:06:24.837794" elapsed="3.954956"/>
+</kw>
+<kw name="Filtrar segmento em Carreira Linx" owner="resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:28.795373" level="INFO">Clicking element '//select[@id='greenouse-segments']'.</msg>
+<arg>${FILTRO_INS_CARREIRA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T22:06:28.794216" elapsed="0.109606"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:28.905683" level="INFO">Selecting options from selection list 'greenouse-segments' by label Linx - Suporte.</msg>
+<arg>greenouse-segments</arg>
+<arg>${SEGMENTO[1]}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-06T22:06:28.903822" elapsed="0.174594"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:29.079448" level="INFO">Selecting options from selection list 'greenouse-segments' by label Linx - Tecnologia e Produto.</msg>
+<arg>greenouse-segments</arg>
+<arg>${SEGMENTO[2]}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-06T22:06:29.079448" elapsed="0.141088"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T22:06:29.250262" level="INFO">Current page contains element '//p[@class='a-title o-work-with-us_subtitle']'.</msg>
+<arg>${TITULO_FILTRO}</arg>
+<arg>${SEGMENTO[2]}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-02-06T22:06:29.220536" elapsed="0.029726"/>
+</kw>
+<arg>Linx - Suporte</arg>
+<arg>Linx - Tecnologia e Produto</arg>
+<status status="PASS" start="2024-02-06T22:06:28.793297" elapsed="0.456965"/>
+</kw>
+<status status="PASS" start="2024-02-06T22:06:09.338743" elapsed="19.911519"/>
+</test>
+<doc>Teste para o processo seletivo de Analista de Testes Sênior.</doc>
+<status status="PASS" start="2024-02-06T22:06:09.037876" elapsed="20.219449"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

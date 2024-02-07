@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-06T16:50:44.173261" rpa="false" schemaversion="5">
+<suite id="s1" name="Linx" source="C:\Users\Néa\OneDrive\Documentos\GitHub\Etapa Teste LINX\Linx">
+<suite id="s1-s1" name="Teste" source="C:\Users\Néa\OneDrive\Documentos\GitHub\Etapa Teste LINX\Linx\teste.robot">
+<test id="s1-s1-t1" name="Cenario 01: Acessar site e verificar componentes" line="7">
+<kw name="Given Acesso ao Site Linx" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-06T16:50:44.504327" level="INFO">Opening browser 'Chrome' to base url 'http://www.linx.com.br/'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-06T16:50:44.501951" elapsed="9.738939"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-06T16:50:54.242540" elapsed="0.131968"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-02-06T16:50:54.374508" elapsed="0.001243"/>
+</kw>
+<status status="PASS" start="2024-02-06T16:50:44.486316" elapsed="9.889435"/>
+</kw>
+<kw name="When acessar institucional&gt;Matriz e Filias">
+<msg time="2024-02-06T16:50:54.386865" level="FAIL">No keyword with name 'When acessar institucional&gt;Matriz e Filias' found.</msg>
+<status status="FAIL" start="2024-02-06T16:50:54.378767" elapsed="0.008098">No keyword with name 'When acessar institucional&gt;Matriz e Filias' found.</status>
+</kw>
+<kw name="And validar se existe filial CASCAVEL/PR">
+<status status="NOT RUN" start="2024-02-06T16:50:54.394881" elapsed="0.000000"/>
+</kw>
+<kw name="Then filal deverá ser visivel em tela">
+<status status="NOT RUN" start="2024-02-06T16:50:54.403169" elapsed="0.003273"/>
+</kw>
+<status status="FAIL" start="2024-02-06T16:50:44.486316" elapsed="9.920126">No keyword with name 'When acessar institucional&gt;Matriz e Filias' found.</status>
+</test>
+<doc>Teste para o processo seletivo de Analista de Testes Sênior.</doc>
+<status status="FAIL" start="2024-02-06T16:50:44.226480" elapsed="10.186040"/>
+</suite>
+<status status="FAIL" start="2024-02-06T16:50:44.197772" elapsed="10.214748"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Linx">Linx</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Teste">Linx.Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
